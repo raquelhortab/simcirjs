@@ -1,0 +1,14 @@
+.simcir-logic-input {
+  stroke-width: 1px;
+  font-weight: normal;
+  fill: #BEDC44;
+}
+
+.simcir-logic-input.true {
+
+}
+
+.simcir-logic-input.false {
+
+}
+

@@ -707,6 +707,13 @@ simcir.$ = function() {
       $target.append(createSVGElement('circle').
           attr({cx: x, cy: y, r: r}).attr(attr) );
     };
+    var drawText = function(x,y,w,h,text,fontSize){
+      var element = createSVGElement('text').
+        attr({x: x, y: y, width:w, height: h});
+      element[0].innerHTML = text;
+      element[0].style.fontSize = fontSize;
+      $target.append(element);
+    };
     return {
       attr: attr,
       moveTo: moveTo,
@@ -714,7 +721,8 @@ simcir.$ = function() {
       curveTo: curveTo,
       closePath: closePath,
       drawRect: drawRect,
-      drawCircle: drawCircle
+      drawCircle: drawCircle,
+      drawText: drawText
     };
   };
 
